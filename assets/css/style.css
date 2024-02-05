@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     /* Debug */
-    border: 1px dashed;
+    /* border: 1px dashed; */
 }
 
 :root {
@@ -30,8 +30,8 @@ body {
 /* Main */
 .app {
     width: 80%;
-    height: 98vh;
-    margin: 0.9vh auto;
+    height: 96vh;
+    margin: 2vh auto;
     display: flex;
 }
 
@@ -47,16 +47,29 @@ body {
     display: flex;
 
     & .user-image {
-        border-radius: 50%;
-        height: 40px;
-        aspect-ratio: 1;
-        background-color: aqua;
+        padding: 0.3rem 0.8rem;
+
+        & img {
+            border-radius: 50%;
+            height: 3rem;
+            aspect-ratio: 1;
+            object-fit: scale-down;
+            
+        }
     }
 
     & .user-utilities {
         flex-grow: 1;
-        background-color: palegreen;
-        text-align: end;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        font-size: 1.5rem;
+        color: var(--icons-color);
+        padding-right: 0.5rem;
+
+        & i {
+            padding: 0.5rem 1rem;
+        }
     }
 }
 
@@ -86,10 +99,15 @@ body {
     display: flex;
 
     & .contact-image {
-        border-radius: 50%;
-        height: 40px;
-        aspect-ratio: 1;
-        background-color: aqua;
+        padding: 0.3rem 0.8rem;
+
+        & img {
+            border-radius: 50%;
+            height: 50px;
+            aspect-ratio: 1;
+            object-fit: scale-down;
+            vertical-align: middle;
+        }
     }
 
     & .contact-info {
@@ -160,7 +178,7 @@ body {
         width: 50px;
         text-align: center;
     }
-    
+
     & .text-area {
         flex-grow: 1;
         background-color: palevioletred;
@@ -182,6 +200,7 @@ body {
         height: 100vh;
         margin: 0;
     }
+
     .left {
         width: fit-content;
 
@@ -198,13 +217,16 @@ body {
 }
 
 @media screen and (max-width: 540px) {
-    
+
     .left {
         display: none;
     }
 
     .right {
-        & .chat-speaker-utilities, & .text-emoticons, & .text-vocal {
+
+        & .chat-speaker-utilities,
+        & .text-emoticons,
+        & .text-vocal {
             display: none;
         }
     }
