@@ -25,13 +25,7 @@ body {
 }
 
 /* Utilities */
-.col-4 {
-    width: calc((100% / 12) * 4);
-}
 
-.col-8 {
-    width: calc((100% / 12) * 8);
-}
 
 /* Main */
 .app {
@@ -106,8 +100,73 @@ body {
 /* #region Right */
 .right {
     width: calc((100% / 12) * 8);
+    display: flex;
+    flex-direction: column;
 }
 
+.chat-header {
+    display: flex;
+
+    & .chat-speaker-image {
+        border-radius: 50%;
+        height: 40px;
+        aspect-ratio: 1;
+        background-color: aqua;
+    }
+
+    & .chat-speaker-info {
+        flex-grow: 1;
+        background-color: palevioletred;
+    }
+
+    & .chat-speaker-utilities {
+        text-align: end;
+        width: 50px;
+    }
+}
+
+.chat-box {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    background-image: url(../img/mine.jpg);
+
+    & .message-sent {
+        height: 100px;
+        width: 300px;
+        overflow: hidden;
+        align-self: flex-end;
+        background-color: var(--sent-text-bg);
+    }
+
+    & .message-received {
+        height: 100px;
+        width: 300px;
+        overflow: hidden;
+    }
+}
+
+.chat-text {
+    display: flex;
+    height: 50px;
+
+    & .text-emoticons {
+        width: 50px;
+        text-align: center;
+    }
+    
+    & .text-area {
+        flex-grow: 1;
+        background-color: palevioletred;
+    }
+
+    & .text-vocal {
+        width: 50px;
+        text-align: center;
+    }
+}
 
 /* #endregion Right */
 
