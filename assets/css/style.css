@@ -6,6 +6,93 @@
     border: 1px dashed;
 }
 
+:root {
+    --body-bg-dark: rgba(0, 150, 136, 1);
+    --body-bg-light: rgba(218, 219, 211, 1);
+    --header-bg: rgba(234, 234, 234, 1);
+    --icons-color: rgba(177, 177, 177, 1);
+    --notifications-bg: rgba(142, 218, 252, 1);
+    --sent-text-bg: rgba(213, 249, 186, 1);
+    --writing-bg: rgba(243, 238, 234, 1);
+    --site-lighter: rgba(255, 255, 255, 1);
+    --site-darker: rgba(26, 27, 26, 1);
+}
+
+/* Common */
 body {
     font-family: 'Lato', sans-serif;
+    height: 100vh;
+}
+
+/* Utilities */
+.col-4 {
+    width: calc((100% / 12) * 4);
+}
+
+.col-8 {
+    width: calc((100% / 12) * 8);
+}
+
+/* Main */
+.app {
+    width: 80%;
+    height: 96vh;
+    margin: 1vh auto;
+    display: flex;
+}
+
+/* Left */
+.contact-list-header {
+    background-color: var(--header-bg);
+    display: flex;
+
+    & .user-image {
+        border-radius: 50%;
+        height: 40px;
+        aspect-ratio: 1;
+        background-color: aqua;
+    }
+
+    & .user-utilities {
+        flex-grow: 1;
+        background-color: palegreen;
+        text-align: end;
+    }
+}
+
+.contact-list-utilities {
+    background-color: var(--header-bg);
+
+    & .notifications {
+        height: 50px;
+        background-color: var(--notifications-bg);
+    }
+
+    & .search-chat {
+        height: 50px;
+        background-color: var(--notifications-bg);
+    }
+}
+
+.contact-list-contacts {
+    background-color: var(--header-bg);
+    height: 50px;
+}
+
+.contact {
+    background-color: var(--site-lighter);
+    height: 50px;
+    display: flex;
+
+    & .contact-image {
+        border-radius: 50%;
+        height: 40px;
+        aspect-ratio: 1;
+        background-color: aqua;
+    }
+
+    & .contact-info {
+        background-color: palegreen;
+        flex-grow: 1;
+    }
 }
