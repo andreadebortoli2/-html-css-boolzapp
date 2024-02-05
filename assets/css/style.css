@@ -45,9 +45,10 @@ body {
 .contact-list-header {
     background-color: var(--header-bg);
     display: flex;
+    align-items: center;
 
     & .user-image {
-        padding: 0.3rem 0.8rem;
+        padding: 0.3rem 1rem;
 
         & img {
             border-radius: 50%;
@@ -101,10 +102,10 @@ body {
     & .search-chat {
         background-color: var(--header-bg);
         text-align: center;
-        padding: 0.5rem 0;
+        padding: 0.5rem;
 
         & input {
-            width: 95%;
+            width: 100%;
             border: 0;
             padding: 0.5rem 0.8rem;
             color: var(--icons-color);
@@ -128,27 +129,45 @@ body {
 
 .contact {
     background-color: var(--site-lighter);
-    height: 50px;
+    border-bottom: 1px solid var(--header-bg);
     display: flex;
+    align-items: center;
 
     & .contact-image {
-        padding: 0.3rem 0.8rem;
+        padding: 0.3rem 1rem;
 
         & img {
             border-radius: 50%;
-            height: 50px;
+            height: 3rem;
             aspect-ratio: 1;
             object-fit: scale-down;
-            vertical-align: middle;
         }
     }
 
     & .contact-info {
-        background-color: palegreen;
         flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0;
+        
+
+        & .contact-name {
+            font-size: 1.5rem;
+        }
+
+        & .contact-status {
+            font-size: 0.7rem;
+            color: var(--icons-color);
+        }
+
+        & .contact-last-access {
+            font-size: 0.9rem;
+            color: var(--icons-color);
+            padding: 0 1rem;
+            
+        }
     }
 }
-
 /* #endregion Left */
 
 /* #region Right */
@@ -160,6 +179,7 @@ body {
 
 .chat-header {
     display: flex;
+    background-color: palegoldenrod;
 
     & .chat-speaker-image {
         border-radius: 50%;
@@ -189,23 +209,21 @@ body {
     overflow: auto;
 
     & .message-sent {
-        height: 100px;
         width: 300px;
-        overflow: hidden;
         align-self: flex-end;
         background-color: var(--sent-text-bg);
     }
 
     & .message-received {
-        height: 100px;
         width: 300px;
-        overflow: hidden;
+        background-color: var(--site-lighter);
     }
 }
 
 .chat-text {
     display: flex;
     height: 50px;
+    background-color: palegoldenrod;
 
     & .text-emoticons {
         width: 50px;
