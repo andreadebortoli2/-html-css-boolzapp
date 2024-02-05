@@ -21,7 +21,7 @@
 /* Common */
 body {
     font-family: 'Lato', sans-serif;
-    height: 100vh;
+    background-image: linear-gradient(to bottom, var(--body-bg-dark) 0%, var(--body-bg-dark) 15%, var(--body-bg-light) 15%, var(--body-bg-light) 100%);
 }
 
 /* Utilities */
@@ -30,8 +30,8 @@ body {
 /* Main */
 .app {
     width: 80%;
-    height: 96vh;
-    margin: 1vh auto;
+    height: 98vh;
+    margin: 0.9vh auto;
     display: flex;
 }
 
@@ -177,6 +177,11 @@ body {
 /* Media queries */
 
 @media screen and (max-width: 991px) {
+    .app {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+    }
     .left {
         width: fit-content;
 
