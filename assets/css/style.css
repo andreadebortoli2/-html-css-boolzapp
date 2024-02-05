@@ -41,7 +41,11 @@ body {
     display: flex;
 }
 
-/* Left */
+/* #region Left */
+.left {
+    width: calc((100% / 12) * 4);
+}
+
 .contact-list-header {
     background-color: var(--header-bg);
     display: flex;
@@ -94,5 +98,36 @@ body {
     & .contact-info {
         background-color: palegreen;
         flex-grow: 1;
+    }
+}
+
+/* #endregion Left */
+
+/* #region Right */
+.right {
+    width: calc((100% / 12) * 8);
+}
+
+
+/* #endregion Right */
+
+/* Media queries */
+
+@media screen and (max-width: 991px) {
+    .left {
+        width: fit-content;
+
+        & .user-utilities,
+        & .contact-list-utilities,
+        & .contact-info {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    
+    .left {
+        display: none;
     }
 }
