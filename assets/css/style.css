@@ -54,7 +54,7 @@ body {
             height: 3rem;
             aspect-ratio: 1;
             object-fit: scale-down;
-            
+
         }
     }
 
@@ -77,13 +77,46 @@ body {
     background-color: var(--header-bg);
 
     & .notifications {
-        height: 50px;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
         background-color: var(--notifications-bg);
+
+        & i {
+            font-size: 1.5rem;
+            padding: 0.8rem;
+            border-radius: 50%;
+            color: var(--notifications-bg);
+            background-color: var(--site-lighter);
+        }
+
+        & a {
+            color: var(--site-darker);
+            font-size: 0.8rem;
+            font-weight: 300;
+        }
     }
 
     & .search-chat {
-        height: 50px;
-        background-color: var(--notifications-bg);
+        background-color: var(--header-bg);
+        text-align: center;
+        padding: 0.5rem 0;
+
+        & input {
+            width: 95%;
+            border: 0;
+            padding: 0.5rem 0.8rem;
+            color: var(--icons-color);
+            font-family: 'Lato', FontAwesome, sans-serif;
+        
+        &:focus {
+            outline: 1px solid var(--icons-color);
+            color: var(--site-darker);
+        }
+        }
+
+
     }
 }
 
