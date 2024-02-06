@@ -41,6 +41,7 @@ body {
     width: calc((100% / 12) * 4);
     display: flex;
     flex-direction: column;
+    border-right: 1px solid var(--icons-color);
 }
 
 .contact-list-header {
@@ -237,14 +238,36 @@ body {
         justify-content: center;
         gap: 1rem;
 
-        & .message-sent {
-            width: 300px;
+        & .message {
+            width: 60%;
+            border-radius: 1rem;
+            padding: 1rem 1rem 1.5rem;
+            display: flex;
+            position: relative;
+
+            & .message-text {
+                flex-grow: 1;
+            }
+
+            & .message-utilities {
+                color: var(--icons-color);
+            }
+
+            & .message-time {
+                font-size: 0.7rem;
+                color: var(--icons-color);
+                position: absolute;
+                bottom: 0.5rem;
+                right: 0.5rem;
+            }
+        }
+
+        & .sent {
             align-self: flex-end;
             background-color: var(--sent-text-bg);
         }
 
-        & .message-received {
-            width: 300px;
+        & .received {
             background-color: var(--site-lighter);
         }
     }
@@ -287,7 +310,8 @@ body {
 
         & .user-utilities,
         & .contact-list-utilities,
-        & .contact-info {
+        & .contact-info,
+        & .contact-last-access {
             display: none;
         }
     }
