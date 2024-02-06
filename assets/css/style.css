@@ -127,6 +127,8 @@ body {
     background-color: var(--header-bg);
     flex-grow: 1;
     overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--icons-color) transparent;
 }
 
 .contact {
@@ -231,6 +233,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--icons-color) transparent;
 
     & .wrapper {
         width: 80%;
