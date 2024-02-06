@@ -25,8 +25,6 @@ body {
     background-image: linear-gradient(to bottom, var(--body-bg-dark) 0%, var(--body-bg-dark) 15%, var(--body-bg-light) 15%, var(--body-bg-light) 100%);
 }
 
-/* Utilities */
-
 
 /* Main */
 .app {
@@ -58,7 +56,6 @@ body {
             height: 3rem;
             aspect-ratio: 1;
             object-fit: scale-down;
-
         }
     }
 
@@ -83,12 +80,11 @@ body {
         padding: 1rem;
         background-color: var(--notifications-bg);
 
-
         & div:nth-child(2) {
             white-space: nowrap;
             overflow-x: hidden;
+            text-overflow: ellipsis;
         }
-
 
         & i {
             font-size: 1.5rem;
@@ -124,7 +120,6 @@ body {
         & input::placeholder {
             color: var(--icons-color);
         }
-
     }
 }
 
@@ -154,10 +149,14 @@ body {
     & .contact-info {
         flex-grow: 1;
         padding: 1rem 0;
-        white-space: nowrap;
         overflow-x: hidden;
 
-
+        & .contact-name,
+        & .contact-status {
+            white-space: nowrap;
+            overflow-x: hidden;
+            text-overflow: ellipsis;
+        }
 
         & .contact-name {
             font-weight: 500;
@@ -167,7 +166,6 @@ body {
             font-size: 0.7rem;
             color: var(--icons-color);
         }
-
     }
 
     & .contact-last-access {
@@ -200,7 +198,6 @@ body {
             height: 3rem;
             aspect-ratio: 1;
             object-fit: scale-down;
-
         }
     }
 
@@ -230,6 +227,9 @@ body {
 .chat-box {
     flex-grow: 1;
     background-image: url(../img/mine.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow-y: auto;
 
     & .wrapper {
@@ -275,9 +275,9 @@ body {
                     font-size: 0.9rem;
                     color: var(--site-darker);
                     background-color: var(--site-lighter);
-                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+                    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 
-                    & > div {
+                    &>div {
                         padding: 0.5rem 1rem;
                     }
                 }
@@ -314,7 +314,6 @@ body {
         font-size: 1.5rem;
         color: var(--icons-color-dark);
         padding: 0 1rem;
-        
     }
 
     & .text-area {
@@ -337,8 +336,6 @@ body {
             color: var(--icons-color);
         }
     }
-
-
 }
 
 /* #endregion Right */
