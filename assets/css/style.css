@@ -11,6 +11,7 @@
     --body-bg-light: rgba(218, 219, 211, 1);
     --header-bg: rgba(234, 234, 234, 1);
     --icons-color: rgba(177, 177, 177, 1);
+    --icons-color-dark: rgba(107, 115, 118, 1);
     --notifications-bg: rgba(142, 218, 252, 1);
     --sent-text-bg: rgba(213, 249, 186, 1);
     --writing-bg: rgba(243, 238, 234, 1);
@@ -116,7 +117,7 @@ body {
             font-family: 'Lato', FontAwesome, sans-serif;
 
             &:focus {
-                outline: 1px solid var(--icons-color);
+                outline: 2px solid var(--icons-color);
             }
         }
 
@@ -233,7 +234,7 @@ body {
 
     & .wrapper {
         width: 80%;
-        margin: 3rem auto 0;
+        margin: 2rem auto 4rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -252,6 +253,34 @@ body {
 
             & .message-utilities {
                 color: var(--icons-color);
+                height: fit-content;
+                position: relative;
+
+                &:hover {
+
+                    & .message-utilities-menu {
+                        display: block;
+                        z-index: 5;
+                    }
+                }
+
+                & .message-utilities-menu {
+                    display: none;
+                    position: absolute;
+                    right: 0;
+                    top: 1.5rem;
+                    width: fit-content;
+                    white-space: nowrap;
+                    text-align: center;
+                    font-size: 0.9rem;
+                    color: var(--site-darker);
+                    background-color: var(--site-lighter);
+                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+
+                    & > div {
+                        padding: 0.5rem 1rem;
+                    }
+                }
             }
 
             & .message-time {
@@ -283,7 +312,7 @@ body {
     & .emoticons,
     & .vocal {
         font-size: 1.5rem;
-        color: var(--icons-color);
+        color: var(--icons-color-dark);
         padding: 0 1rem;
         
     }
@@ -300,7 +329,7 @@ body {
             padding: 0 0.5rem;
 
             &:focus {
-                outline: 1px solid var(--icons-color);
+                outline: 2px solid var(--icons-color);
             }
         }
 
