@@ -80,6 +80,13 @@ body {
         gap: 1rem;
         padding: 1rem;
         background-color: var(--notifications-bg);
+        
+
+        & div:nth-child(2) {
+            white-space: nowrap;
+            overflow-x: hidden;
+        }
+
 
         & i {
             font-size: 1.5rem;
@@ -121,7 +128,7 @@ body {
 .contact-list-contacts {
     background-color: var(--header-bg);
     flex-grow: 1;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 .contact {
@@ -143,10 +150,11 @@ body {
 
     & .contact-info {
         flex-grow: 1;
-        display: flex;
-        justify-content: space-between;
         padding: 1rem 0;
+        white-space: nowrap;
+        overflow-x: hidden;
 
+        
 
         & .contact-name {
             font-weight: 500;
@@ -157,12 +165,13 @@ body {
             color: var(--icons-color);
         }
 
-        & .contact-last-access {
-            font-size: 0.9rem;
-            color: var(--icons-color);
-            padding: 0 1rem;
+    }
 
-        }
+    & .contact-last-access {
+        font-size: 0.9rem;
+        color: var(--icons-color);
+        padding: 1rem;
+        align-self: self-start ;
     }
 }
 
@@ -218,7 +227,7 @@ body {
 .chat-box {
     flex-grow: 1;
     background-image: url(../img/mine.jpg);
-    overflow: auto;
+    overflow-y: auto;
 
     & .wrapper {
         width: 80%;
