@@ -129,54 +129,55 @@ body {
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: var(--icons-color) transparent;
-}
-
-.contact {
-    background-color: var(--site-lighter);
-    border-bottom: 1px solid var(--header-bg);
-    display: flex;
-    align-items: center;
-
-    & .contact-image {
-        padding: 0.3rem 1rem;
-
-        & img {
-            border-radius: 50%;
-            height: 3rem;
-            aspect-ratio: 1;
-            object-fit: scale-down;
+    
+    & .contact {
+        background-color: var(--site-lighter);
+        border-bottom: 1px solid var(--header-bg);
+        display: flex;
+        align-items: center;
+    
+        & .contact-image {
+            padding: 0.3rem 1rem;
+    
+            & img {
+                border-radius: 50%;
+                height: 3rem;
+                aspect-ratio: 1;
+                object-fit: scale-down;
+            }
         }
-    }
-
-    & .contact-info {
-        flex-grow: 1;
-        padding: 1rem 0;
-        overflow-x: hidden;
-
-        & .contact-name,
-        & .contact-status {
-            white-space: nowrap;
+    
+        & .contact-info {
+            flex-grow: 1;
+            padding: 1rem 0;
             overflow-x: hidden;
-            text-overflow: ellipsis;
+    
+            & .contact-name,
+            & .contact-status {
+                white-space: nowrap;
+                overflow-x: hidden;
+                text-overflow: ellipsis;
+            }
+    
+            & .contact-name {
+                font-weight: 500;
+            }
+    
+            & .contact-status {
+                font-size: 0.7rem;
+                color: var(--icons-color);
+            }
         }
-
-        & .contact-name {
-            font-weight: 500;
-        }
-
-        & .contact-status {
-            font-size: 0.7rem;
+    
+        & .contact-last-access {
+            font-size: 0.9rem;
             color: var(--icons-color);
+            padding: 1rem;
+            align-self: self-start;
         }
-    }
-
-    & .contact-last-access {
-        font-size: 0.9rem;
-        color: var(--icons-color);
-        padding: 1rem;
-        align-self: self-start;
     }
 }
+
 
 /* #endregion Left */
 
@@ -257,7 +258,7 @@ body {
 
             & .message-utilities {
                 color: var(--icons-color);
-                height: fit-content;
+                height: 1.5rem;
                 position: relative;
 
                 &:hover {
@@ -281,7 +282,7 @@ body {
                     background-color: var(--site-lighter);
                     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 
-                    &>div {
+                    & > div {
                         padding: 0.5rem 1rem;
                     }
                 }
