@@ -48,7 +48,7 @@ body {
     display: flex;
     align-items: center;
 
-    & .user-image {
+    .user-image {
         padding: 0.3rem 1rem;
 
         & img {
@@ -59,7 +59,7 @@ body {
         }
     }
 
-    & .user-utilities {
+    .user-utilities {
         flex-grow: 1;
         display: flex;
         justify-content: end;
@@ -73,7 +73,7 @@ body {
 .contact-list-utilities {
     background-color: var(--header-bg);
 
-    & .notifications {
+    .notifications {
         display: flex;
         align-items: center;
         gap: 1rem;
@@ -101,7 +101,7 @@ body {
         }
     }
 
-    & .search-chat {
+    .search-chat {
         background-color: var(--header-bg);
         text-align: center;
         padding: 0.5rem;
@@ -130,13 +130,13 @@ body {
     scrollbar-width: thin;
     scrollbar-color: var(--icons-color) transparent;
     
-    & .contact {
+    .contact {
         background-color: var(--site-lighter);
         border-bottom: 1px solid var(--header-bg);
         display: flex;
         align-items: center;
     
-        & .contact-image {
+        .contact-image {
             padding: 0.3rem 1rem;
     
             & img {
@@ -147,29 +147,29 @@ body {
             }
         }
     
-        & .contact-info {
+        .contact-info {
             flex-grow: 1;
             padding: 1rem 0;
             overflow-x: hidden;
     
-            & .contact-name,
-            & .contact-status {
+            .contact-name,
+            .contact-status {
                 white-space: nowrap;
                 overflow-x: hidden;
                 text-overflow: ellipsis;
             }
     
-            & .contact-name {
+            .contact-name {
                 font-weight: 500;
             }
     
-            & .contact-status {
+            .contact-status {
                 font-size: 0.7rem;
                 color: var(--icons-color);
             }
         }
     
-        & .contact-last-access {
+        .contact-last-access {
             font-size: 0.9rem;
             color: var(--icons-color);
             padding: 1rem;
@@ -193,7 +193,7 @@ body {
     align-items: center;
     background-color: var(--header-bg);
 
-    & .chat-speaker-image {
+    .chat-speaker-image {
         padding: 0.3rem 1rem;
 
         & img {
@@ -204,21 +204,21 @@ body {
         }
     }
 
-    & .chat-speaker-info {
+    .chat-speaker-info {
         flex-grow: 1;
 
-        & .speaker-name {
+        .speaker-name {
             font-size: 1.3rem;
             font-weight: 500;
         }
 
-        & .speaker-last-access-info {
+        .speaker-last-access-info {
             font-size: 0.9rem;
             color: var(--icons-color);
         }
     }
 
-    & .chat-speaker-utilities {
+    .chat-speaker-utilities {
         display: flex;
         gap: 1rem;
         font-size: 1.5rem;
@@ -237,7 +237,7 @@ body {
     scrollbar-width: thin;
     scrollbar-color: var(--icons-color) transparent;
 
-    & .wrapper {
+    .wrapper {
         width: 80%;
         margin: 2rem auto 4rem;
         display: flex;
@@ -245,31 +245,31 @@ body {
         justify-content: center;
         gap: 1rem;
 
-        & .message {
+        .message {
             width: 60%;
             border-radius: 1rem;
             padding: 1rem 1rem 1.5rem;
             display: flex;
             position: relative;
 
-            & .message-text {
+            .message-text {
                 flex-grow: 1;
             }
 
-            & .message-utilities {
+            .message-utilities {
                 color: var(--icons-color);
                 height: 1.5rem;
                 position: relative;
 
                 &:hover {
 
-                    & .message-utilities-menu {
+                    .message-utilities-menu {
                         display: block;
                         z-index: 5;
                     }
                 }
 
-                & .message-utilities-menu {
+                .message-utilities-menu {
                     display: none;
                     position: absolute;
                     right: 0;
@@ -288,7 +288,7 @@ body {
                 }
             }
 
-            & .message-time {
+            .message-time {
                 font-size: 0.7rem;
                 color: var(--icons-color);
                 position: absolute;
@@ -297,12 +297,12 @@ body {
             }
         }
 
-        & .sent {
+        .sent {
             align-self: flex-end;
             background-color: var(--sent-text-bg);
         }
 
-        & .received {
+        .received {
             background-color: var(--site-lighter);
         }
     }
@@ -314,14 +314,14 @@ body {
     background-color: var(--header-bg);
     padding: 0.5rem;
 
-    & .emoticons,
-    & .vocal {
+    .emoticons,
+    .vocal {
         font-size: 1.5rem;
         color: var(--icons-color-dark);
         padding: 0 1rem;
     }
 
-    & .text-area {
+    .text-area {
         flex-grow: 1;
         padding: 0 0.5rem;
 
@@ -357,10 +357,10 @@ body {
     .left {
         width: fit-content;
 
-        & .user-utilities,
-        & .contact-list-utilities,
-        & .contact-info,
-        & .contact-last-access {
+        .user-utilities,
+        .contact-list-utilities,
+        .contact-info,
+        .contact-last-access {
             display: none;
         }
     }
@@ -378,9 +378,9 @@ body {
 
     .right {
 
-        & .chat-speaker-utilities,
-        & .emoticons,
-        & .vocal {
+        .chat-speaker-utilities,
+        .emoticons,
+        .vocal {
             display: none;
         }
     }
